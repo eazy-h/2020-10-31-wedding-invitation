@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta property="og:title" content="그대의 밤 나의 아침">
+  <meta property="og:title" content="여행의 시작, 우리 함께">
   <meta property="og:site_name" content="2020.10.31 낮 12시">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://jhle-e.github.io/2020-10-31-wedding-invitation/index.html">
@@ -32,7 +32,7 @@
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="align-items-center">
     <div class="container text-center position-relative">
-      <h1>그대의 밤 나의 아침</h1>
+      <h1>여행의 시작, 우리 함께</h1>
       <h1 style="font-size: 27px;">2020.10.31</h1>
       <p class="mt-3" style="color:whitesmoke; font-size: 16px;">지환 그리고 수정</p>
     </div>
@@ -59,13 +59,13 @@
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
           <div class="col-lg-4 col-md-6 portfolio-item filter-app" style="text-align: center;">
             <div>
-              <img src="images/000391800025.jpg" class="" alt="웨딩사진3">
+              <img src="images/000391800025.jpg" class="" alt="wedding-pho-3">
               <p class="mt-4" style="text-align: center; color:#859E88;">삶을 함께 여행 할 <br>좋은 친구를 만났습니다.</p>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 portfolio-item filter-web" style="text-align: center;">
             <div>
-              <img src="images/000391800036.jpg" class="" alt="웨딩사진2">
+              <img src="images/000391800036.jpg" class="" alt="wedding-pho-2">
               <!-- <p class="mt-4" style="text-align: center; color:#859E88;">멋진 석양을 만날 때도 소나기를 맞을때도 <br>더 없이 즐거운 순간에도<br>
                 오르막길에 지치는 순간에도</p> -->
               <p class="mt-4" style="text-align: center; color:#859E88;">우린 앞으로 최선을 다해 <br> 이 여행을 함께 즐기기로 했습니다.
@@ -74,7 +74,7 @@
           </div>
           <div class="col-lg-4 col-md-6 portfolio-item filter-web" style="text-align: center;">
             <div>
-              <img src="images/000391810027.jpg" class="" alt="웨딩사진1">
+              <img src="images/000391810027.jpg" class="" alt="wedding-pho-1">
               <p class="mt-4" style="text-align: center; color:#859E88;">청명한 계절의 자연 속<br>그 시작의 순간에 함께 해주세요.</p>
             </div>
           </div>
@@ -97,7 +97,6 @@
 
               <h5 style="color: #6c856f;">서울어린이대공원 근화원</h5>
               <p style="color: #6c856f;">2020년 10월 31일 낮 12시</p><br>
-              <p style="color: #6c856f;">* 예식이 끝나고 애프터파티가 있습니다. <br>여유로운 마음으로 오셔서 <br>함께 즐기며 이야기 나누면 좋겠습니다.</p>
             </div>
 
           </div>
@@ -113,9 +112,6 @@
         </div>
         <div class="col-lg-12 d-flex justify-content-center" data-aos-delay="100">
           <div class="info mt-4">
-            <!-- <div style="text-align: center;" style="color: #6c757d;">
-              <h6 style="margin-bottom: 10%; font-weight: 600;">서울어린이대공원 근화원</h6>
-            </div> -->
             <div class="form-group row">
               <label style="color:#859E88;" for="inputEmail3" class="col-sm-2 col-form-label">자가용</label>
               <div class="col-sm-10" style="text-align: left;">
@@ -142,7 +138,7 @@
                 <p>세종대학교 6015</p>
               </div>
             </div>
-            <div class="form-group row">
+            <!-- <div class="form-group row">
               <label style="color:#859E88;" for="inputPassword3" class="col-sm-2 col-form-label">식장 셔틀버스</label>
               <div class="col-sm-10" style="text-align: left;">
                 <p>*출발지</p>
@@ -150,7 +146,7 @@
                 <p>*운행시간</p>
                 <p>17:00 - 17:50 (10분 간격으로 출발)</p>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -195,33 +191,20 @@
 
   <script>
     let container = document.getElementById('map');
+    //근화원
     let options = {
-      //어린이회관 
-      // center: new kakao.maps.LatLng(37.5472460029599, 127.078304434841),
-      //근화원
       center: new kakao.maps.LatLng(37.54684166781413, 127.08040041996722),
       level: 4
     };
-    let map = new kakao.maps.Map(container, options); // 지도를 생성합니다
-    // 마커를 생성합니다
+    let map = new kakao.maps.Map(container, options); 
     let marker = new kakao.maps.Marker({
-      // position: options.center
       position: map.getCenter()
     });
-    // 마커가 지도 위에 표시되도록 설정합니다
     marker.setMap(map);
 
     kakao.maps.event.addListener(map, 'click', function (mouseEvent) {
-
-      // 클릭한 위도, 경도 정보를 가져옵니다 
       let latlng = mouseEvent.latLng;
-
-      // 마커 위치를 클릭한 위치로 옮깁니다
       marker.setPosition(latlng);
-
-      // console.log('클릭한 위치의 위도는 ' + latlng.getLat() + ' 이고, ');
-      // console.log('경도는 ' + latlng.getLng() + ' 입니다');
-
     });
   </script>
 </body>
