@@ -210,8 +210,8 @@
       marker.setPosition(latlng);
     });
 
-
-    Kakao.Link.sendDefault({
+    try{
+        Kakao.Link.sendDefault({
         objectType: 'feed',
         content: {
             title: '딸기 치즈 케익',
@@ -245,6 +245,10 @@
             },
         ],
     });
+    }catch (e) {
+        console.log(e)
+    }
+    
 
   </script>
 </body>
