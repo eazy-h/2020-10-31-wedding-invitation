@@ -220,7 +220,7 @@
     Kakao.init('399e564a878628492302c44c4af22c11')
     function sendLink() {
         //필수값 cont
-        Kakao.Link.createDefaultButton({
+        Kakao.Link.sendDefault({
             container: '#create-kakao-link-btn', //필수
             objectType: 'feed',                  //필수
             content: {                           //필수
@@ -246,13 +246,13 @@
                         webUrl: 'https://addcampus.com/story/9',
                     },
                 },
-                // {
-                // title: '앱으로 보기',
-                // link: {
-                //     mobileWebUrl: 'https://developers.kakao.com',
-                //     webUrl: 'https://developers.kakao.com',
-                // },
-                // },
+                {
+                title: '앱으로 보기',
+                link: {
+                    mobileWebUrl: 'https://developers.kakao.com',
+                    webUrl: 'https://developers.kakao.com',
+                },
+                },
             ],
         })
   }
