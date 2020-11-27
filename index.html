@@ -193,64 +193,7 @@
   <!-- <script src="js/kakao.js"></script> -->
 
   <script>
-
-//       try{
-//         let container = document.getElementById('map');
-//         //근화원
-//         let options = {
-//         center: new kakao.maps.LatLng(37.54684166781413, 127.08040041996722),
-//         level: 4
-//         };
-//         let map = new kakao.maps.Map(container, options);
-//         let marker = new kakao.maps.Marker({
-//         position: map.getCenter()
-//         });
-//         marker.setMap(map);
-
-//         kakao.maps.event.addListener(map, 'click', function (mouseEvent) {
-//         let latlng = mouseEvent.latLng;
-//         marker.setPosition(latlng);
-//         });
-//       }catch (e) {
-
-//       }
-    
-//     Kakao.init('399e564a878628492302c44c4af22c11')
-//     function sendLink() {
-//         Kakao.Link.sendDefault({
-//         objectType: 'feed',
-//         content: {
-//             title: '연애세포 진단 테스트',
-//             description: '거기 있니? 똑똑, 들리세요? 당신의 연애세포, 살아있나요?!',
-//             imageUrl:
-//             'https://d1qzykz9iz00c7.cloudfront.net/story/content/9/content_2020-11-23-11-30-55.295885.jpg',
-//             link: {
-//             mobileWebUrl: 'https://addcampus.com/story/9',
-//             webUrl: 'https://addcampus.com/story/9',
-//             },
-//         },
-//         buttons: [
-//             {
-//             title: '웹으로 보기',
-//             link: {
-//                 mobileWebUrl: 'https://addcampus.com/story/9',
-//                 webUrl: 'https://addcampus.com/story/9',
-//             },
-//             },
-//             {
-//             title: '앱으로 보기',
-//             link: {
-//                 mobileWebUrl: 'https://addcampus.com/story/9',
-//                 webUrl: 'https://addcampus.com/story/9',
-//             },
-//             },
-//         ],
-//         })
-//   }
-
-
-
-try{
+      try{
         let container = document.getElementById('map');
         //근화원
         let options = {
@@ -267,50 +210,47 @@ try{
         let latlng = mouseEvent.latLng;
         marker.setPosition(latlng);
         });
-      }catch (e) {
+      }catch(e) {
 
-      } 
+      }
     
-
-
-    Kakao.init('399e564a878628492302c44c4af22c11')
-    function sendLink() {
-        Kakao.Link.sendDefault({
-            objectType: 'feed',
-            content: {
-                title: '딸기 치즈 케익',
-                description: '#케익 #딸기 #삼평동 #카페 #분위기 #소개팅',
-                imageUrl:
-                'http://k.kakaocdn.net/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png',
-                link: {
-                mobileWebUrl: 'https://developers.kakao.com',
-                webUrl: 'https://developers.kakao.com',
-                },
-            },
-            social: {
-                likeCount: 286,
-                commentCount: 45,
-                sharedCount: 845,
-            },
-            buttons: [
-                {
-                title: '웹으로 보기',
-                link: {
-                    mobileWebUrl: 'https://developers.kakao.com',
-                    webUrl: 'https://developers.kakao.com',
-                },
-                },
-                {
-                title: '앱으로 보기',
-                link: {
-                    mobileWebUrl: 'https://developers.kakao.com',
-                    webUrl: 'https://developers.kakao.com',
-                },
-                },
-            ],
-        })
+   Kakao.init('399e564a878628492302c44c4af22c11')
+   function sendLink() {
+    Kakao.Link.sendDefault({
+      objectType: 'feed',
+      content: {
+        title: '딸기 치즈 케익',
+        description: '#케익 #딸기 #삼평동 #카페 #분위기 #소개팅',
+        imageUrl:
+          'http://k.kakaocdn.net/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png',
+        link: {
+          mobileWebUrl: 'https://developers.kakao.com',
+          webUrl: 'https://developers.kakao.com',
+        },
+      },
+      social: {
+        likeCount: 286,
+        commentCount: 45,
+        sharedCount: 845,
+      },
+      buttons: [
+        {
+          title: '웹으로 보기',
+          link: {
+            mobileWebUrl: 'https://developers.kakao.com',
+            webUrl: 'https://developers.kakao.com',
+          },
+        },
+        {
+          title: '앱으로 보기',
+          link: {
+            mobileWebUrl: 'https://developers.kakao.com',
+            webUrl: 'https://developers.kakao.com',
+          },
+        },
+      ],
+    })
   }
-    
 
   
     
