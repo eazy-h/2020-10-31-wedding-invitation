@@ -219,39 +219,40 @@
 
     Kakao.init('399e564a878628492302c44c4af22c11')
     function sendLink() {
-        alert(1)
-        Kakao.Link.sendDefault({
-            objectType: 'feed',
-            content: {
-                title: '딸기 치즈 케익',
-                description: '#케익 #딸기 #삼평동 #카페 #분위기 #소개팅',
+        //필수값 cont
+        Kakao.Link.createDefaultButton({
+            container: '#create-kakao-link-btn', //필수
+            objectType: 'feed',                  //필수
+            content: {                           //필수
+                title: '연애세포 진단 테스트',            //공유받을 모바일 카톡 화면에서 보여질 타이틀 (필수)
+                description: '거기 있니? 똑똑, 들리세요? 당신의 연애세포, 살아있나요?!',
                 imageUrl:
-                'http://k.kakaocdn.net/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png',
-                link: {
-                mobileWebUrl: 'https://developers.kakao.com',
-                webUrl: 'https://developers.kakao.com',
+                'https://d1qzykz9iz00c7.cloudfront.net/story/content/9/content_2020-11-23-11-30-55.295885.jpg', //이미지 썸네일 필수
+                link: { // 필수
+                mobileWebUrl: 'https://addcampus.com/story/9', //모바일상에서 보여줄 url 링크 https:// (필수)
+                webUrl: 'https://addcampus.com/story/9',       //웹에서 보여줄 url 링크 위와 동일 
                 },
             },
             social: {
-                likeCount: 286,
-                commentCount: 45,
-                sharedCount: 845,
+                likeCount: 5, //좋아요 수
+                commentCount: 8, //참여 수
+                // sharedCount: 845, //공유 수는 모르겠당
             },
-            buttons: [
+            buttons: [ //링크에서 보여지는 버튼 (웹으로 보기), (앱으로보기)
                 {
                 title: '웹으로 보기',
-                link: {
-                    mobileWebUrl: 'https://developers.kakao.com',
-                    webUrl: 'https://developers.kakao.com',
+                    link: {
+                        mobileWebUrl: 'https://addcampus.com/story/9',
+                        webUrl: 'https://addcampus.com/story/9',
+                    },
                 },
-                },
-                {
-                title: '앱으로 보기',
-                link: {
-                    mobileWebUrl: 'https://developers.kakao.com',
-                    webUrl: 'https://developers.kakao.com',
-                },
-                },
+                // {
+                // title: '앱으로 보기',
+                // link: {
+                //     mobileWebUrl: 'https://developers.kakao.com',
+                //     webUrl: 'https://developers.kakao.com',
+                // },
+                // },
             ],
         })
   }
