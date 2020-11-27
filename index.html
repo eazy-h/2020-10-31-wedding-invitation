@@ -161,7 +161,7 @@
             href="https://apis.openapi.sk.com/tmap/app/routes?appKey=l7xx3dfb3295d8124556850be72ce009da9d&name=근화원&lon=127.08040041996722&lat=37.54684166781413">티맵실행</a>
         </div>
         <div style="text-align: center; margin-top: 7%;">
-            <a id="create-kakao-link-btn" href="javascript:;">
+            <a id="create-kakao-link-btn" href="javascript:sendLink();">
                 <img src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"/>
             </a>
             <p>카카오톡으로 공유하기</p>
@@ -193,61 +193,68 @@
   <!-- <script src="js/kakao.js"></script> -->
 
   <script>
-    let container = document.getElementById('map');
-    //근화원
-    let options = {
-      center: new kakao.maps.LatLng(37.54684166781413, 127.08040041996722),
-      level: 4
-    };
-    let map = new kakao.maps.Map(container, options);
-    let marker = new kakao.maps.Marker({
-      position: map.getCenter()
-    });
-    marker.setMap(map);
 
-    kakao.maps.event.addListener(map, 'click', function (mouseEvent) {
-      let latlng = mouseEvent.latLng;
-      marker.setPosition(latlng);
-    });
+      try{
+        let container = document.getElementById('map');
+        //근화원
+        let options = {
+        center: new kakao.maps.LatLng(37.54684166781413, 127.08040041996722),
+        level: 4
+        };
+        let map = new kakao.maps.Map(container, options);
+        let marker = new kakao.maps.Marker({
+        position: map.getCenter()
+        });
+        marker.setMap(map);
 
-    try{
+        kakao.maps.event.addListener(map, 'click', function (mouseEvent) {
+        let latlng = mouseEvent.latLng;
+        marker.setPosition(latlng);
+        });
+      }catch (e) {
+
+      }
+    
+
+
+    Kakao.init('399e564a878628492302c44c4af22c11')
+    function sendLink() {
+        alert(1)
         Kakao.Link.sendDefault({
-        objectType: 'feed',
-        content: {
-            title: '딸기 치즈 케익',
-            description: '#케익 #딸기 #삼평동 #카페 #분위기 #소개팅',
-            imageUrl:
-            'http://k.kakaocdn.net/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png',
-            link: {
-            mobileWebUrl: 'https://developers.kakao.com',
-            webUrl: 'https://developers.kakao.com',
-            },
-        },
-        social: {
-            likeCount: 286,
-            commentCount: 45,
-            sharedCount: 845,
-        },
-        buttons: [
-            {
-            title: '웹으로 보기',
-            link: {
+            objectType: 'feed',
+            content: {
+                title: '딸기 치즈 케익',
+                description: '#케익 #딸기 #삼평동 #카페 #분위기 #소개팅',
+                imageUrl:
+                'http://k.kakaocdn.net/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png',
+                link: {
                 mobileWebUrl: 'https://developers.kakao.com',
                 webUrl: 'https://developers.kakao.com',
+                },
             },
+            social: {
+                likeCount: 286,
+                commentCount: 45,
+                sharedCount: 845,
             },
-            {
-            title: '앱으로 보기',
-            link: {
-                mobileWebUrl: 'https://developers.kakao.com',
-                webUrl: 'https://developers.kakao.com',
-            },
-            },
-        ],
-    });
-    }catch (e) {
-        console.log(e)
-    }
+            buttons: [
+                {
+                title: '웹으로 보기',
+                link: {
+                    mobileWebUrl: 'https://developers.kakao.com',
+                    webUrl: 'https://developers.kakao.com',
+                },
+                },
+                {
+                title: '앱으로 보기',
+                link: {
+                    mobileWebUrl: 'https://developers.kakao.com',
+                    webUrl: 'https://developers.kakao.com',
+                },
+                },
+            ],
+        })
+  }
     
 
   </script>
